@@ -1,0 +1,158 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container{
+    margin: auto;
+
+    width: 55%;
+    height: 80%;
+    background-color: #efefef;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(5,20%) ;
+    grid-template-areas: 
+    "scrn scrn scrn scrn"
+    "num1 num2 num3 addSign"
+    "num4 num5 num6 subtractSign"
+    "num7 num8 num9 timesSign"
+    "clear num0 equalSign divisionSign";
+    box-sizing: border-box;
+    box-shadow: 2px 5px 5px 2px darkmagenta;
+}
+@media (max-width: 1040px) and (max-width:710px) {
+    .container{
+        margin: auto;
+        width: 60%;
+        height: 80%;
+    }
+    h1{
+        position: relative;
+        left: 50%;
+    }
+}
+@media (max-width: 480px) and (min-width: 380px){
+    .container{
+        position: relative;
+        right: 20%;
+        width: 100%;
+        height: 70%;
+    }
+    h1{
+        position: relative;
+        left: 30%;
+    }
+}
+/* Small-screen phones (portrait) */
+@media (max-width: 380px) and (min-width: 320px) {
+    .container {
+        position: relative;
+        right: 20%;
+        width: 100%;
+        height: 70%;
+    }
+    h1 {
+        position: relative;
+        right: 50%;
+    }
+}
+
+
+.calStyle{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    font-size: 16px;
+}
+h1{
+    position: relative;
+    left: 50%;
+    text-shadow: 2px 5px 5px 2px purple;
+}
+button:hover{
+    background-color: aliceblue;
+    border: 2px solid darkmagenta;
+    box-shadow: 2px 5px 5px 2px purple;
+}
+button:active{
+    box-shadow: 1px 2px 2px 1px purple;
+}
+#screen{
+    grid-area: scrn;
+    border: 1px solid black;
+    width: 90%;
+    background-color: #ffff;
+    box-shadow: 2px 5px 5px 2px black;
+    font-size: 16px;
+}
+#screenView{
+    width: 90%;
+    height: 50%;
+    color: black;
+    text-align: left;
+    padding: 5px;
+    font-size: 16px;
+}
+#screenResult{
+    width: 90%;
+    height: 50%;
+    color: black;
+    text-align: right;
+    padding: 5px;
+    font-size: 16px;
+}
+#num1{
+    grid-area: num1;
+}
+#num2{
+    grid-area: num2;
+}
+#num3{
+    grid-area: num3;
+}
+#num4{
+    grid-area: num4;
+}
+#num5{
+    grid-area: num5;
+}
+#num6{
+    grid-area: num6;
+}
+#num7{
+    grid-area: num7;
+}
+#num8{
+    grid-area: num8;
+}
+#num9{
+    grid-area: num9;
+}
+#num0{
+    grid-area: num0;
+}
+#equalSign{
+    grid-area: equalSign;
+}
+#timesSign{
+    grid-area: timesSign;
+}
+#addSign{
+    grid-area: addSign;
+}
+#subtractSign{
+    grid-area: subtractSign;
+}
+#divisionSign{
+    grid-area: divisionSign;
+}
+#clear{
+    grid-area: clear;
+    font-size: 10px
+}
